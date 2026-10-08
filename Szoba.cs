@@ -6,7 +6,6 @@ namespace Szalloda
 {
     public class Szoba
     {
-        private int terezia;
         private int ejszakaiAr;
         private int ferohely;
         private static int osszesRegisztraltSzoba = 0;
@@ -42,10 +41,9 @@ namespace Szalloda
         {
             return $"{Szobaszam} Emelet: {Emelet}. | Férőhely: {Ferohely} fő |Ár: {EjszakaiAr} Ft/ éj";
         }
-        //public int FoglalasErtek(int ejszakakSzama)
-        //{
-        //    get => ejszakakSzama;
-        //    set => ejszakakSzama * EjszakaiAr;
-        //}
+        public int FoglalasErtek(int ejszakakSzama)
+        {
+            return ejszakakSzama * EjszakaiAr;
+        }
     }
 }
