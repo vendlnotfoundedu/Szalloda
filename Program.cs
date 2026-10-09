@@ -15,12 +15,10 @@ if (File.Exists("szobak.txt"))
                 Szoba aktualis = new Szoba(adatok[0], emelet, ar, ferohely);
                 szobak.Add(aktualis);
             }
+            else Console.WriteLine($"Hiányzó adat(ok) a kovetkező sorban: {sor}");
         }
+        else Console.WriteLine($"Hiányzó számadat(ok) a kovetkező sorban: {sor}");
     }
 }
 else Console.WriteLine("A szobak.txt fájl nem található.");
 Console.WriteLine($"Összesen {Szoba.OsszesRegisztraltSzoba} szoba regisztrálva.");
-foreach (Szoba szoba in szobak)
-{
-    Console.WriteLine(szoba);
-}
