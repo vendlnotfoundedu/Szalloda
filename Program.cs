@@ -22,3 +22,5 @@ if (File.Exists("szobak.txt"))
 }
 else Console.WriteLine("A szobak.txt fájl nem található.");
 Console.WriteLine($"Összesen {Szoba.OsszesRegisztraltSzoba} szoba regisztrálva.");
+foreach (Szoba szoba in szobak) Console.WriteLine(szoba);
+Console.WriteLine($"Összes regisztrált szoba: {Szoba.OsszesRegisztraltSzoba}");
